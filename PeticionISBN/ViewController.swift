@@ -16,10 +16,10 @@ class ViewController: UIViewController {
     @IBAction func buscarLibros(sender: AnyObject) {
         detalleISBN.text = ""
         var urls = "https://openlibrary.org/api/books?jscmd=data&format=json&bibkeys=ISBN:"
-        let isbn = numeroISBN.text
+        let isbn = numeroISBN.text!
         urls = "\(urls)\(isbn)"
         let url = NSURL(string: urls)
-            let datos:NSData? = NSData(contentsOfURL: url!)
+        let datos:NSData? = NSData(contentsOfURL: url!)
         if datos == nil {
             let alertController = UIAlertController(title: "Error", message:"Se ha producido un error de comunicación.", preferredStyle: UIAlertControllerStyle.Alert)
             

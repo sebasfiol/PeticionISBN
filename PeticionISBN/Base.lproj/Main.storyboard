@@ -18,9 +18,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="VoQ-0F-WHl">
-                                <rect key="frame" x="77" y="63" width="166" height="30"/>
+                                <rect key="frame" x="54" y="63" width="212" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" returnKeyType="search"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" returnKeyType="search"/>
                                 <connections>
                                     <action selector="buscarLibros:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="mnF-K3-0vk"/>
                                 </connections>
@@ -42,11 +42,11 @@
                         <constraints>
                             <constraint firstItem="rel-Fj-oOX" firstAttribute="top" secondItem="VoQ-0F-WHl" secondAttribute="bottom" constant="27" id="567-mE-iv8"/>
                             <constraint firstItem="Dq5-2f-bSn" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="63g-uH-XuM"/>
-                            <constraint firstItem="rel-Fj-oOX" firstAttribute="leading" secondItem="VoQ-0F-WHl" secondAttribute="leading" constant="-57" id="ADJ-7J-tby"/>
+                            <constraint firstItem="rel-Fj-oOX" firstAttribute="leading" secondItem="VoQ-0F-WHl" secondAttribute="leading" constant="-34" id="ADJ-7J-tby"/>
                             <constraint firstItem="Dq5-2f-bSn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Dxb-lv-K6T"/>
                             <constraint firstItem="VoQ-0F-WHl" firstAttribute="top" secondItem="Dq5-2f-bSn" secondAttribute="bottom" constant="14" id="S0d-p8-AgL"/>
                             <constraint firstItem="Dq5-2f-bSn" firstAttribute="centerX" secondItem="VoQ-0F-WHl" secondAttribute="centerX" id="hpx-3V-M75"/>
-                            <constraint firstItem="Dq5-2f-bSn" firstAttribute="leading" secondItem="VoQ-0F-WHl" secondAttribute="leading" constant="21" id="okC-Ah-D4B"/>
+                            <constraint firstItem="Dq5-2f-bSn" firstAttribute="leading" secondItem="VoQ-0F-WHl" secondAttribute="leading" constant="44" id="okC-Ah-D4B"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="rel-Fj-oOX" secondAttribute="bottom" constant="20" id="pl5-2t-w9o"/>
                             <constraint firstItem="VoQ-0F-WHl" firstAttribute="centerX" secondItem="rel-Fj-oOX" secondAttribute="centerX" id="zKe-gs-GEt"/>
                         </constraints>
