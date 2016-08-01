@@ -1,7 +1,7 @@
 //
 //  ViewController.swift
-//  PeticionISBN
-//
+//  PeticionISBN V2
+//  Tarea Semana 2
 //  Created by SebasFiol on 15/7/16.
 //  Copyright © 2016 SebasFiol. All rights reserved.
 //
