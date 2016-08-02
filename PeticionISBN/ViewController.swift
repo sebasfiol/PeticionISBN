@@ -18,6 +18,7 @@ class ViewController: UIViewController {
     @IBAction func buscarLibros(sender: AnyObject) {
         self.tituloLibro.text = ""
         self.autores.text = ""
+        self.portadaLibro.image = nil
         var urls = "https://openlibrary.org/api/books?jscmd=data&format=json&bibkeys=ISBN:"
         let isbn = numeroISBN.text!
         urls = "\(urls)\(isbn)"
@@ -36,7 +37,6 @@ class ViewController: UIViewController {
                 let dico1 = json as! NSDictionary
                 let dico2 = dico1["ISBN:"+isbn] as! NSDictionary
                 self.tituloLibro.text = dico2["title"] as! NSString as String
-                //let dico3 = dico2["authors"] as! NSArray
                 if let dico3 = dico2["authors"] as? [[String: AnyObject]] {
                     for autor in dico3 {
                         if let name = autor["name"] as? String {
@@ -49,11 +49,13 @@ class ViewController: UIViewController {
                         cargarImagen(dico5)
                 }
             }
-            catch _ {
-                
+          catch _ {
+            let alertController = UIAlertController(title: "Error", message:"Se ha producido un error en la aplicación.", preferredStyle: UIAlertControllerStyle.Alert)
+            
+            alertController.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default,handler: nil))
+            
+            self.presentViewController(alertController, animated: true, completion: nil)
             }
-        //let texto = NSString(data: datos!, encoding: NSUTF8StringEncoding)!
-        //detalleISBN.text = String(texto)
         }
         self.view.endEditing(true)
     }
@@ -62,16 +64,17 @@ class ViewController: UIViewController {
     {
         let url = NSURL(string: urlString)
         let datos = NSData(contentsOfURL: url!)
-        if datos == nil {
+        if datos != nil {
             self.portadaLibro.image = UIImage(data: datos!)
         }
         
     }
 
-
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        self.tituloLibro.text = ""
+        self.autores.text = ""
+        self.portadaLibro.image = nil
     }
 
     override func didReceiveMemoryWarning() {
