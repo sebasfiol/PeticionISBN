@@ -40,7 +40,7 @@ class ViewController: UIViewController {
                 if let dico3 = dico2["authors"] as? [[String: AnyObject]] {
                     for autor in dico3 {
                         if let name = autor["name"] as? String {
-                            self.autores.insertText(name)
+                            self.autores.insertText(name+"\n")
                         }
                     }
                 }
